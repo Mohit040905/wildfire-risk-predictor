@@ -68,3 +68,39 @@ if st.button("🔍 Predict Fire Intensity", use_container_width=True):
 # Footer
 st.divider()
 st.caption("Data Source: NASA VIIRS Satellite | Model: Random Forest (82% accuracy) | 3.8M Indian fire records")
+st.divider()
+st.markdown("### 🧪 Try a Real Recorded Fire Event")
+
+examples = {
+    "Uttarakhand Forest Fire 2016 🔴": {
+        "lat": 30.1, "lon": 79.3, "ti4": 340.5,
+        "ti5": 298.2, "conf": 2, "month": 4, "year": 2016,
+        "scan": 0.4, "track": 0.4
+    },
+    "Odisha Wildfire 2019 🟠": {
+        "lat": 20.5, "lon": 84.2, "ti4": 325.3,
+        "ti5": 294.1, "conf": 1, "month": 3, "year": 2019,
+        "scan": 0.4, "track": 0.4
+    },
+    "Kerala Forest Fire 2017 🟢": {
+        "lat": 10.8, "lon": 76.5, "ti4": 312.1,
+        "ti5": 291.8, "conf": 0, "month": 2, "year": 2017,
+        "scan": 0.4, "track": 0.4
+    }
+}
+
+selected = st.selectbox("Select a real fire event:", list(examples.keys()))
+
+if st.button("🔍 Test This Event", use_container_width=True):
+    e = examples[selected]
+    features = np.array([[e['lat'], e['lon'], e['ti4'],
+                          e['scan'], e['track'], e['conf'],
+                          e['ti5'], e['month'], e['year']]])
+    prediction = model.predict(features)[0]
+
+    if prediction == 'High':
+        st.error(f"🔴 Predicted Intensity: HIGH")
+    elif prediction == 'Medium':
+        st.warning(f"🟠 Predicted Intensity: MEDIUM")
+    else:
+        st.success(f"🟢 Predicted Intensity: LOW")
