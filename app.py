@@ -72,20 +72,20 @@ st.divider()
 st.markdown("### 🧪 Try a Real Recorded Fire Event")
 
 examples = {
-    "Northeast India Fire 2012 🔴": {
+    "Northeast India Fire 2012 🔴 High": {
         "lat": 22.83762, "lon": 92.52300, "ti4": 367.0,
         "ti5": 338.8, "conf": 2, "month": 3, "year": 2012,
         "scan": 0.39, "track": 0.36
     },
-    "Odisha/Chhattisgarh Fire 2013 🟠": {
-        "lat": 19.52095, "lon": 80.90150, "ti4": 351.8,
-        "ti5": 283.5, "conf": 1, "month": 3, "year": 2013,
-        "scan": 0.41, "track": 0.61
+    "Goa/Konkan Fire 2012 🟠 Medium": {
+        "lat": 15.70065, "lon": 73.80601, "ti4": 345.1,
+        "ti5": 311.0, "conf": 1, "month": 11, "year": 2012,
+        "scan": 0.43, "track": 0.38
     },
-    "Kerala Forest Fire 2017 🟢": {
-        "lat": 10.8, "lon": 76.5, "ti4": 312.1,
-        "ti5": 291.8, "conf": 0, "month": 2, "year": 2017,
-        "scan": 0.4, "track": 0.4
+    "MP Forest Fire 2014 🟢 Low": {
+        "lat": 23.60208, "lon": 78.18566, "ti4": 336.9,
+        "ti5": 310.7, "conf": 0, "month": 4, "year": 2014,
+        "scan": 0.58, "track": 0.70
     }
 }
 
