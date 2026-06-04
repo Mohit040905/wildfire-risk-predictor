@@ -73,14 +73,14 @@ st.markdown("### 🧪 Try a Real Recorded Fire Event")
 
 examples = {
     "Uttarakhand Forest Fire 2016 🔴": {
-        "lat": 30.1, "lon": 79.3, "ti4": 340.5,
-        "ti5": 298.2, "conf": 2, "month": 4, "year": 2016,
+        "lat": 30.1, "lon": 79.3, "ti4": 362.5,
+        "ti5": 318.2, "conf": 2, "month": 4, "year": 2016,
         "scan": 0.4, "track": 0.4
     },
     "Odisha Wildfire 2019 🟠": {
-        "lat": 20.5, "lon": 84.2, "ti4": 325.3,
-        "ti5": 294.1, "conf": 1, "month": 3, "year": 2019,
-        "scan": 0.4, "track": 0.4
+        "lat": 20.5, "lon": 84.2, "ti4": 345.3,
+        "ti5": 305.1, "conf": 1, "month": 3, "year": 2019,
+        "scan": 0.5, "track": 0.5
     },
     "Kerala Forest Fire 2017 🟢": {
         "lat": 10.8, "lon": 76.5, "ti4": 312.1,
